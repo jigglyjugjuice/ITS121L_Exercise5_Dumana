@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>My First e-Portfolio</title>
+    <title>Classes</title>
 
 <style>
 
@@ -25,12 +25,18 @@
         font-family: 'Segoe UI', sans-serif;
         background-color: #191919;
         color:#ffffff;
+        font-size: 16px;
     }
 
     .site-header {
         background-color: transparent; /* Change the background color as per your design */
         color: #ffffff; /* Change the text color as per your design */
         padding: 0px;
+    }
+
+    #header_phrase {
+        font-size: small;
+        color: #8b8b8b;
     }
 
     .header-rectangle {
@@ -67,12 +73,13 @@
 
     #header_picture {
         width: 100%;
-        margin-bottom: 120px;
+        margin-bottom: 85px;
     }
 
     section {
         margin-left:300px;
         margin-right:300px;
+        overflow-y:hidden;
     }
 
     hr {
@@ -85,30 +92,232 @@
         padding: 0;
     }
 
-    .contactrowcontainer img {
-    width: 15%; /* Set your desired width */
-    height: 0 auto; /* Set your desired height */
-    margin: 10px; /* Add margin between the images if needed */
-}
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 45px 0;
+        text-align: center;
+        margin-top: 120px;
+    }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 45px 0;
-    text-align: center;
-    margin-top: 120px;
-}
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-decoration: none;
+    }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-decoration: none;
-}
+    .footer-content p {
+        margin: 0;
+        text-decoration: none;
+    }
 
-.footer-content p {
-    margin: 0;
-    text-decoration: none;
-}
+    #content-container {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    #left-content {
+        width: 25%; /* Set the width for the left side content */
+        padding: 10px; /* Adjust padding based on your design */
+        overflow: hidden;
+        margin-right:20px;
+    }
+
+    #vertical-line {
+        border-color:#8b8b8b;
+        height: 100%; /* Make the line the full height of the container */
+        background:#8b8b8b;
+    }
+
+    #right-content {
+        width: 75%; /* Set the width for the right side content */
+        
+    }
+
+    #content-containerB {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        align-content: center;
+    }
+
+    #second-content {
+        width: 100%; /* Set the width for the right side content */
+        
+    }
+
+    .container {
+        display:inline-block;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .card {
+        background:#333;
+        width:400px;
+        height:260px;
+        margin:8px;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        border-radius: 1.5%;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .card:hover {
+        transform: scale(1.02);
+    }
+
+    .card-imageA {
+        background-image: url(classes1.jpg);
+        height:220px;
+        width:100%;
+        object-fit: cover;
+        margin-bottom:20px;
+        border-radius: 1.5%;
+    }
+
+    .card-imageB {
+        background-image: url(classes2.jpg);
+        height:220px;
+        width:100%;
+        object-fit: cover;
+        margin-bottom:20px;
+        border-radius: 1.5%;
+    }
+
+    .card-imageC {
+        background-image: url(classes5.jpg);
+        height:220px;
+        width:100%;
+        object-fit: cover;
+        margin-bottom:20px;
+        border-radius: 1.5%;
+    }
+
+    .card-imageD {
+        background-image: url(classes3.jpg);
+        height:220px;
+        width:100%;
+        object-fit: cover;
+        margin-bottom:20px;
+        border-radius: 1.5%;
+    }
+
+    .class-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 10px;
+        padding:0;
+        font-family: monospace;
+        font-size: 15px;
+    }
+
+    .class-text:hover {
+        text-decoration: underline;
+    }
+
+    a:visited {
+        color: inherit;
+    }
+
+    html {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        font-size: 62.5%;
+    }
+
+    html * {
+        box-sizing: inherit;
+    }
+
+    .calendar {
+        background-color: #afcfaa;
+        border-radius: 1%;
+        padding: 3.2rem;
+    }
+
+    .calendar__header {
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        letter-spacing: 0.2rem;
+        padding: 0 0.4rem 1.2rem;
+        text-transform: uppercase;
+    }
+
+    .calendar__day-names {
+        border-bottom: 0.1rem solid white;
+        display: flex;
+        gap: 1.2rem;
+        margin-bottom: 0.8rem;
+        padding: 0.8rem 0;
+    }
+
+    .calendar__day-name {
+        aspect-ratio: 1;
+        color: white;
+        font-weight: normal;
+        text-align: center;
+        width: 2.4rem;
+    }
+
+    .calendar__day_numbers {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .calendar__day-numbers-row {
+        display: flex;
+        gap: 1.2rem;
+        padding: 0.6rem 0;
+    }
+
+    .calendar__day-numbers-row:first-child {
+        justify-content: flex-end;
+    }
+
+    .calendar__day-number {
+        align-content: center;
+        justify-content: center;
+        aspect-ratio: 1;
+        color: white;
+        display: flex;
+        line-height: 1.4;
+        text-align: center;
+        width: 2.4rem;
+    }
+
+    .calendar__day-number--current {
+        background-color: #72946d;
+        border-radius: 3%;
+        align-content: center;
+        justify-content: center;
+        box-shadow: 0 0 0 0.3rem #72946d;
+        color: #FFF;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .rectangledivider {
+        width:100%;
+        height: 35px;
+        background-color: #61745e;
+        margin: auto;
+        display: flex;
+        justify-content: center; /* Horizontal centering */
+        align-items: center;
+    }
+
+    .second-content-text {
+
+    }
+    
 
 </style>
 </head>
@@ -126,14 +335,138 @@ footer {
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
-          <img id="header_picture" src="header_picture_classes.jpg">
+          <img id="header_picture" src="header_picture_class.jpg">
         </div>
     </header>
 
     <section>
-        <h1>check out isabella's classes</h1>
-        <p>oops! nothing to see here yet.</p>
+
+        <h1>my classes</h1>
+        <p id="header_phrase">a page that consists of a calendar, weather updates, class lists, you name it.</p>
+
         <hr>
+
+        <div id="content-container">
+            <div id="left-content">
+              <!-- Your left side content  -->
+              
+              <div class="calendar">
+                <header class="calendar__header">
+                  <div class="calendar__month"></div>
+                  <div class="calendar__year"></div>
+                </header>
+                <div class="calendar__grid">
+                  <div class="calendar__day-names">
+                    <span class="calendar__day-name">S</span>
+                    <span class="calendar__day-name">M</span>
+                    <span class="calendar__day-name">T</span>
+                    <span class="calendar__day-name">W</span>
+                    <span class="calendar__day-name">T</span>
+                    <span class="calendar__day-name">F</span>
+                    <span class="calendar__day-name">S</span>
+                  </div>
+                  <div class="calendar__day-numbers"></div>
+                </div>
+              </div>
+
+              <script>
+
+                    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+                    // get current date values
+                    const currentDate = new Date();
+                    const currentYear = currentDate.getFullYear();
+                    const currentMonth = currentDate.getMonth();
+                    const currentDay = currentDate.getDate();
+
+                    // set month and year
+                    document.querySelector('.calendar__month').innerText = months[currentDate.getMonth()];
+                    document.querySelector('.calendar__year').innerText = currentYear;
+
+                    // create grid of days
+                    let daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+                    let week = document.createElement('div');
+                    week.classList.add('calendar__day-numbers-row');
+
+                    for (i = 1; i <= daysInMonth; i++) {
+                        let day = document.createElement('span');
+                        day.classList.add('calendar__day-number');
+                        day.innerText = i;
+                        (i == currentDay) && day.classList.add('calendar__day-number--current');
+                        week.append(day);
+
+                        if (new Date(currentYear, currentMonth, i).getDay() == 6 || i == daysInMonth) {
+                            document.querySelector('.calendar__day-numbers').append(week);
+
+                            if (i != daysInMonth) {
+                                week = document.createElement('div');
+                                week.classList.add('calendar__day-numbers-row');
+                            }
+                        }
+                    }
+
+              </script>
+
+            </div>
+    
+            <div id="vertical-line"></div>
+    
+            <div id="right-content">
+              <!-- Your right side content  -->    
+
+                
+
+            </div>
+                    
+        </div>
+
+        <hr>
+
+        <div id="content-containerB">
+    
+            <div id="second-content">
+              <!-- Your bottom content  -->   
+                
+                <h3 class="second-content-text">list of current classes</h3>
+
+              <hr>
+
+            <div class="container">
+                <div class="card">
+                    
+                    <div class="card-imageA">
+                        <a href="https://mapua.blackboard.com/ultra/courses/_122469_1/outline"><h3 class="class-text">&#128214 GED105_AM12 ⋆ ˚｡⋆୨୧˚</h3></a>
+                    </div>
+                </div>
+            </div>  
+            
+            <div class="container">
+                <div class="card">
+                    <div class="card-imageB">
+                        <a href="https://mapua.blackboard.com/ultra/courses/_122838_1/outline"><h3 class="class-text">&#128190 ITS121L_AM12 ⋆ ˚｡⋆୨୧˚</h3></a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="container">
+                <div class="card">
+                    <div class="card-imageC">
+                        <a href="https://mapua.blackboard.com/ultra/courses/_123043_1/outline"><h3 class="class-text">&#128211 MATH147-2_BM4 ⋆ ˚｡⋆୨୧˚</h3></a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="container">
+                <div class="card">
+                    <div class="card-imageD">
+                        <a href="https://mapua.blackboard.com/ultra/courses/_121661_1/outline"><h3 class="class-text">&#128187 CSS121L_BM4 ⋆ ˚｡⋆୨୧˚</h3></a>
+                    </div>
+                </div>
+            </div> 
+
+            </div>
+        </div>     
+        
     
     </section>
 

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flip Clock</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f2f2f2;
+    }
+    
+    .flip-clock {
+        display: flex;
+        align-items: center;
+    }
+    
+    .digit-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 0.5rem;
+    }
+
+    .digit {
+        width: 3rem;
+        height: 4.5rem;
+        margin-bottom: 0.5rem;
+        perspective: 1000px;
+    }
+    
+    .card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+    }
+    
+    .card .side {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        font-weight: bold;
+        background-color: #333;
+        color: #fff;
+    }
+    
+    .card .back {
+        transform: rotateY(180deg);
+    }
+</style>
+</head>
+<body>
+
+<div class="flip-clock">
+    <div class="digit-box">
+        <div class="digit">
+            <div class="card">
+                <div class="side front" id="hours-tens">0</div>
+                <div class="side back" id="hours-tens-back">0</div>
+            </div>
+        </div>
+        <div class="digit">
+            <div class="card">
+                <div class="side front" id="hours-ones">0</div>
+                <div class="side back" id="hours-ones-back">0</div>
+            </div>
+        </div>
+    </div>
+    <div class="digit-box">
+        :
+    </div>
+    <div class="digit-box">
+        <div class="digit">
+            <div class="card">
+                <div class="side front" id="minutes-tens">0</div>
+                <div class="side back" id="minutes-tens-back">0</div>
+            </div>
+        </div>
+        <div class="digit">
+            <div class="card">
+                <div class="side front" id="minutes-ones">0</div>
+                <div class="side back" id="minutes-ones-back">0</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function updateClock() {
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    
+    updateDigit('hours-tens', Math.floor(hours / 10));
+    updateDigit('hours-ones', hours % 10);
+    updateDigit('minutes-tens', Math.floor(minutes / 10));
+    updateDigit('minutes-ones', minutes % 10);
+    
+    setTimeout(updateClock, 60000); // Update every minute
+}
+
+function updateDigit(digitId, value) {
+    var digit = document.getElementById(digitId);
+    var backDigit = document.getElementById(digitId + '-back');
+    digit.innerText = value;
+    backDigit.innerText = value;
+}
+
+updateClock();
+</script>
+
+</body>
+</html>

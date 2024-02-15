@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>My First e-Portfolio</title>
+    <title>Home</title>
 
 <style>
 
@@ -17,7 +17,7 @@
          url('/surface/Assets/css/fonts/all/normal/segoeui.svg#SegoeUI') format('svg');
     font-weight: normal;
     font-style: normal;
-}
+    }
 
     body {
         margin: 0;
@@ -67,12 +67,13 @@
 
     #header_picture {
         width: 100%;
-        margin-bottom: 120px;
+        margin-bottom: 60px;
     }
 
     section {
         margin-left:300px;
         margin-right:300px;
+        overflow-y:hidden;
     }
 
     hr {
@@ -89,24 +90,20 @@
         font-size: small;
         color: #8b8b8b;
     }
-
-    rect {
-        color:aquamarine
+    
+    .rectangledesigncontainer {
+        width:100%;
+        height:auto;
+        justify-content: space-between;
     }
 
-    .rectangle {
-        width: 12.5%; /* Set the width of the rectangle */
+    .rectangledesign {
+        width: 12%; /* Set the width of the rectangle */
         height: 30px; /* Set the height of the rectangle */
-        background-color: #7bd0d7; /* Set the background color */
-        display:inline-flex;
-    }
-
-    .rectangle1 {
-        width: 100%; /* Set the width of the rectangle */
-        height: 50px; /* Set the height of the rectangle */
-        background-color: #8b8b8b; /* Set the background color */
-        display:inline-flex;
-        margin-bottom: 25px;
+        background-color: #61745e; /* Set the background color */
+        display:inline-grid;
+        margin-right:26px;
+        margin-left:26px;
     }
 
     #content-container {
@@ -122,15 +119,19 @@
     }
 
     #vertical-line {
-        width: 1px !important; /* Set the width of the vertical line */
-        height: 100px; /* Make the line the full height of the container */
-        background-color: #8b8b8b !important;
+        border-color:#8b8b8b;
+        height: 100%; /* Make the line the full height of the container */
+        background-color:#8b8b8b;
     }
 
     #right-content {
-        width: 75%; /* Set the width for the right side content */
+        width: 80%; /* Set the width for the right side content */
         padding: 20px; /* Adjust padding based on your design */
         margin-left:10px;
+    }
+    
+    #achievementscontainer:hover {
+        background-size: cover;
     }
 
     #achievements {
@@ -139,24 +140,72 @@
         height: auto; /* Maintain the aspect ratio of the image */
         display: block; /* Remove any inline spacing issues */
         margin-top: 20px; /* Center the image within the container */
+        transition: all 0.5s ease-in-out;
+        border-radius: 3%;
+        object-fit: cover;
     }
-
+    
+    #achievements:hover {
+        content: url("certificate_math.jpeg");
+        transform: scale(1.03);
+    }
+    
     #achievements2 {
         max-width: 100%; /* Limit the maximum width of the image */
         width:100%;
-        height: 250px; /* Maintain the aspect ratio of the image */
+        height: auto; /* Maintain the aspect ratio of the image */
         display: block; /* Remove any inline spacing issues */
         margin-top: 20px; /* Center the image within the container */
+        transition: all 0.5s ease-in-out;
+        border-radius: 3%;
+    }
+    
+    #achievements2:hover {
+        content:url(certificate_trouble.jpeg);
+        transform: scale(1.03);
+    }
+
+    #achievements3 {
+        max-width: 100%; /* Limit the maximum width of the image */
+        width:100%;
+        height: auto; /* Maintain the aspect ratio of the image */
+        display: block; /* Remove any inline spacing issues */
+        margin-top: 20px; /* Center the image within the container */
+        transition: all 0.5s ease-in-out;
+        border-radius: 3%;
+    }
+    
+    #achievements3:hover {
+        content:url(certificate_programming.jpeg);
+        transform: scale(1.03);
+    }
+    
+    #achievements4 {
+        max-width: 100%; /* Limit the maximum width of the image */
+        width:100%;
+        height: auto; /* Maintain the aspect ratio of the image */
+        display: block; /* Remove any inline spacing issues */
+        margin-top: 20px; /* Center the image within the container */
+        transition: all 0.5s ease-in-out;
+        border-radius: 3%;
+    }
+    
+    #achievements4:hover {
+        content:url(certificate_programming.jpeg);
+        transform: scale(1.03);
     }
 
     #profilepic {
         max-width:30%;
         height:auto; /* */
         object-fit:contain; /* */
+        border-radius: 3%;
     }
 
-    .container {
+    .profilecontainer {
         display:flex;
+        background-color: aqua hidden;
+        margin-bottom: 20px;
     }
     
 
@@ -175,23 +224,180 @@
     }
 
     footer {
-    background-color: #333;
-    color: #fff;
-    padding: 45px 0;
-    text-align: center;
-    margin-top: 120px;
-}
+        background-color: #333;
+        color: #fff;
+        padding: 45px 0;
+        text-align: center;
+        margin-top: 120px;
+    }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-decoration: none;
-}
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-decoration: none;
+    }
 
-.footer-content p {
-    margin: 0;
-    text-decoration: none;
-}
+    .footer-content p {
+        margin: 0;
+        text-decoration: none;
+    }
+    
+    .rectangledivider {
+        width:100%;
+        height: 35px;
+        background-color: #61745e;
+        margin: auto;
+        display: flex;
+        justify-content: center; /* Horizontal centering */
+        align-items: center;
+    }
+    
+    .skillscontainer {
+        display:flex;
+        margin:0 auto;
+    }
+    
+    .textside {
+        width:60%;
+        padding:10px;
+        text-align:justify;
+    }
+    
+    .imgside {
+        width:40%;
+        padding: 10px; /* Adjust padding based on your design */
+        overflow:hidden;
+        position:relative;
+    }
+    
+    #imgscaling {
+        width:100%;
+        height:auto;
+        border-radius:3%;
+        justify-content: space-between;
+        margin-top:50px;
+    }
+    
+    .slider-wrapper .image-list {
+        display:grid;
+        grid-template-columns: repeat(10,1fr);
+        column-gap: 18px;
+    }
+    
+    .slider-wrapper .image-list .image-item {
+        width:310px;
+        height:400px;
+        object-fit: cover;
+    }
+    
+    .container {
+        margin-top:30px;
+        margin-bottom: 20px;
+    }
+
+    .image-list:hover {
+        background-size: cover;
+    }
+
+    #project1 {
+        display:block;
+        transition: all 0.5s ease-in-out;
+        object-fit:cover;
+    }
+
+    #project1:hover {
+        content:url();
+        transform:scale(1.02)
+    }
+
+    #project2 {
+        display:block;
+        transition: all 0.5s ease-in-out;
+        object-fit:cover;
+    }
+
+    #project2:hover {
+        content:url();
+        transform:scale(1.02)
+    }
+
+    #project3 {
+        display:block;
+        transition: all 0.5s ease-in-out;
+        object-fit:cover;
+    }
+
+    #project3:hover {
+        content:url();
+        transform:scale(1.02)
+    }
+
+    #project4 {
+        display:block;
+        transition: all 0.5s ease-in-out;
+        object-fit:cover;
+    }
+
+    #project4:hover {
+        content:url();
+        transform:scale(1.02)
+    }
+
+    #project5 {
+        display:block;
+        transition: all 0.5s ease-in-out;
+        object-fit:cover;
+    }
+
+    #project5:hover {
+        content:url();
+        transform:scale(1.02)
+    }
+
+    ::-webkit-scrollbar {
+        width: 100%;
+        height:3px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: white;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #61745e;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #414e3f;
+        cursor: grab;
+    }
+
+    #projectstext {
+        font-family:monospace;
+        margin: 0;
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    #skillsettext {
+        font-family:monospace;
+        margin: 0;
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    a:visited {
+        color: inherit;
+    }
+
+    small {
+        text-decoration: underline;
+        font-size:smaller;
+        font-family: monospace;
+        color:#97af92;
+    }
+    
+
 
     
 
@@ -206,46 +412,59 @@
         <div class="header-rectangle">
           <nav>
             <ul>
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 
-              <li><a href="index.html">Home</a></li>
-              <li><a href="classes.html">Classes</a></li>
-              <li><a href="activities.html">Activities</a></li>
-              <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
-          <img id="header_picture" src="header_picture.jpg">
+            
+          <img id="header_picture" src="header_picture.png">
+            
         </div>
     </header>
 
     <section>
+        
         <h1>welcome to isabella's e-portfolio</h1>
             <p id="header_phrase">a showcase of my digital journey.</p>
-        <hr>
-            <div class="rectangle"></div>
+            
+        </div>
+        
         <hr>
     
 
     <div id="content-container">
         <div id="left-content">
           <!-- Your left side content  -->
+            <h2>try hovering...</h2>
+        <div class="achievementscontainer">
+            
           <a href="https://www.coursera.org/account/accomplishments/verify/UD5B2F4UA584"><img id="achievements" src="achievements1.gif" title="Mathematics for Computer Science"></a>
           
-          <a href="https://www.coursera.org/account/accomplishments/verify/GSJDLRNHBGWP"><img id="achievements" src="achievements2.gif" title="Troubleshooting and Debugging Techniques"></a>
+          <a href="https://www.coursera.org/account/accomplishments/verify/GSJDLRNHBGWP"><img id="achievements2" src="achievements2.gif" title="Troubleshooting and Debugging Techniques"></a>
          
-          <a href="https://www.coursera.org/account/accomplishments/verify/62FSQ32TN382"><img id="achievements2" src="achievements3.gif" title="Programming for Everybody (Getting Started with Python)"></a>
-       
+          <a href="https://www.coursera.org/account/accomplishments/verify/62FSQ32TN382"><img id="achievements3" src="achievements4.gif" title="Programming for Everybody (Getting Started with Python)"></a>
+            
+          <a href="https://www.coursera.org/account/accomplishments/verify/L9VHFL2WY3FS"><img id="achievements4" src="achievements5.gif" title="How Computers Work"></a>
+            
+        </div>
+            
         </div>
 
         <div id="vertical-line"></div>
 
         <div id="right-content">
           <!-- Your right side content  -->
-            <div class="container">
+            <div class="profilecontainer">
                 <div class="image">
-                    <img id="profilepic" src="profilepic.jpg">
+                    <img id="profilepic" src="profilepic.jpg" alt="profile_picture">
                     
                 <div class="text">
-                    <h2 id="aboutmetitle">about me!</h2>
+                    <h3 id="aboutmetitle">about me!</h3>
+                    
                         <p>I'm Isabella Dumana, a first-year Computer Science student with a deep enthusiasm for all things tech.</p>
 
                         <p>Choosing Mapua University for my academic journey was a conscious decision fueled by my aspiration to become 
@@ -253,16 +472,109 @@
                         algorithms, and data structures, laying a solid foundation for my future endeavors in the dynamic field of technology.</p>
                         
                         <p>The challenges and opportunities that come with being a first-year computer science student excite me, and I'm eager 
-                        to learn and grow, driven by my ambition to make a meaningful impact in the ever-evolving world of technology.</p>
+                        to learn and grow, driven by my ambition to make a meaningful impact in the ever-evolving world of technology.</p>  
+                    
                 </div>
-                </div>
+                </div>  
             </div>
-        </div>
+            
+            <div class="rectangledivider">
+                <p id="skillsettext">current skillset</p>
+            </div>
+            
+            <div class="skillscontainer">
+                
+                <div class="textside">
+                    
+                        
+                    <br><h3>HTML (Beginner to Intermediate)</h3>
+                    <p>As an aspiring web developer, I've attained a solid understanding of HTML, progressing from foundational concepts to intermediate proficiency. My journey began with mastering HTML syntax, tags, and basic structure, laying the groundwork for building web pages effectively.
 
-    
+                    Transitioning to an intermediate level, I've expanded my skills to include semantic HTML, form validation, and integration of HTML5 features for enhanced functionality. I prioritize clean, well-structured code that adheres to best practices, ensuring optimal performance and cross-browser compatibility.</p>
+                    
+                    <a href="https://github.com/jigglyjugjuice"><small>check out my HTML projects on Github!</small></a>
+                    
+                    <br><br><br><br>
+                    
+                    <h3>CSS (Beginner)</h3>
+                    <p>I've acquired a solid understanding of styling principles, including selectors, properties, and values. I've learned to apply CSS rules to HTML elements, enhancing their appearance and layout with colors, fonts, margins, and padding.
+
+                    Transitioning from basic concepts to a beginner level, I've explored the box model, understanding how elements are rendered on the page and how to manipulate their dimensions and spacing. I've also delved into basic layout techniques, such as floats and positioning, to arrange elements on the page effectively.</p>
+                    
+                    <a href="https://github.com/jigglyjugjuice"><small>check out my CSS projects on Github!</small></a>
+                    
+                    <br><br><br><br>
+                    
+
+                    <h3>C++ (Beginner to Intermediate)</h3>
+                    <p> I've developed a strong foundation in C++, a versatile and powerful programming language widely used in software development, system programming, and embedded systems.
+
+                    My experience with C++ began with mastering the fundamental concepts of the language, including variables, data types, control structures, and functions. I've gained proficiency in object-oriented programming (OOP) principles, understanding concepts such as classes, objects, inheritance, polymorphism, and encapsulation.
+
+                    As I progressed in my learning, I've applied my C++ skills to various projects and applications. Notably, I've ventured into the realm of robotics, utilizing C++ to program microcontrollers, particularly Arduino boards. In robotics projects, I've leveraged C++ to control sensors, actuators, and other peripherals, implementing algorithms for motion control, sensor fusion, and decision-making.</p>                                     
+                
+                    <a href="https://github.com/jigglyjugjuice"><small>check out my C++ projects on Github!</small></a>
+
+                </div>
+                
+                <div class="imgside">
+                    
+                    <img id="imgscaling" src="skills3.gif" alt="gif_1">
+                       
+                    <img id="imgscaling" src="skills2.gif" alt="gif_2">
+                    
+                    <img id="imgscaling" src="skills1.gif" alt="gif_3">
+                    
+                </div>
+                
+            </div>
+           
+        </div>
+        
+    </div>
  
     </section>
+        
 
+
+    <section>
+
+    <hr>
+
+        <div class="rectangledivider">
+            <p id="projectstext">projects gallery</p>
+        </div>
+
+    </section>
+    
+
+
+    <section>
+        
+        <div class="container">
+            
+            <div class="slider-wrapper">
+                
+                <div class="image-list">
+                    
+                    <img src="project1.gif" alt="project_" id="project1" class="image-item">
+                    <img src="project3.gif" alt="project_" id="project2" class="image-item">
+                    <img src="project6.gif" alt="project_" id="project3" class="image-item">
+                    <img src="project7.gif" alt="project_" id="project4" class="image-item">
+                    <img src="project8.gif" alt="project_" id="project5" class="image-item">
+                    <img src="project4.gif" alt="project_" id="project5" class="image-item">
+                    <img src="project5.gif" alt="project_" id="project5" class="image-item">
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </section>
+
+    
+    
     <footer>
         <div class="footer-content">
             <b><p>get in touch at ipdumana@mymail.mapua.edu.ph</p></b>
